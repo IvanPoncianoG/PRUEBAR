@@ -36,7 +36,8 @@ import { AdministradorComponent } from './administrador/administrador.component'
 import { UnploadFileComponent } from './unpload-file/unpload-file.component';
 
 
-
+import { AngularFireStorageModule } from '@angular/fire/storage'; 
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 
 
@@ -94,9 +95,12 @@ var config = {
     BrowserModule,
     AppRoutingModule,
     AdminModule,
+
     
     AngularFireModule.initializeApp(config),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
